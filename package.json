@@ -1,98 +1,101 @@
 {
-	"name": "svg2jsx",
-	"displayName": "svg2jsx",
-	"description": "",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.85.0"
-	},
-	"categories": [
-		"Formatters"
-	],
-	"activationEvents": [],
-	"main": "./out/extension.js",
-	"contributes": {
-		"languages": [
-			{
-				"id": "javascript",
-				"extensions": [
-					".js"
-				],
-				"configuration": "./language-configuration.json"
-			},
-			{
-				"id": "typescript",
-				"extensions": [
-					".ts"
-				],
-				"configuration": "./language-configuration.json"
-			},
-			{
-				"id": "javascriptreact",
-				"extensions": [
-					".jsx"
-				],
-				"configuration": "./language-configuration.json"
-			},
-			{
-				"id": "typescriptreact",
-				"extensions": [
-					".tsx"
-				],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"documentFormattingEditors": [
-			{
-				"languageId": "javascript",
-				"extensionId": "svg2jsx",
-				"scheme": "file"
-			},
-			{
-				"languageId": "typescript",
-				"extensionId": "svg2jsx",
-				"scheme": "file"
-			},
-			{
-				"languageId": "javascriptreact",
-				"extensionId": "svg2jsx",
-				"scheme": "file"
-			},
-			{
-				"languageId": "typescriptreact",
-				"extensionId": "svg2jsx",
-				"scheme": "file"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "bun run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "bun run compile && bun run lint",
-		"lint": "eslint src --ext ts",
-		"test": "vscode-test",
-		"package": "vsce package --no-dependencies",
-		"install": "code --install-extension *.vsix"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.85.0",
-		"@types/mocha": "^10.0.6",
-		"@types/node": "18.x",
-		"@typescript-eslint/eslint-plugin": "^6.15.0",
-		"@typescript-eslint/parser": "^6.15.0",
-		"eslint": "^8.56.0",
-		"typescript": "^5.3.3",
-		"@vscode/test-cli": "^0.0.4",
-		"@vscode/test-electron": "^2.3.8"
-	},
-	"dependencies": {
-		"@svgr/plugin-jsx": "^8.1.0",
-		"@svgr/plugin-prettier": "^8.1.0",
-		"@types/babel__core": "^7.20.5",
-		"@types/prettier": "^3.0.0",
-		"@types/svgo": "^3.0.0",
-		"@vscode/vsce": "^2.23.0",
-		"prettier": "^3.2.4"
-	}
+  "name": "svg2jsx",
+  "displayName": "svg2jsx",
+  "description": "Convert SVG to JSX in React components on save.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "repository": "https://github.com/pugson/vscode-svg2jsx",
+  "icon": "icon.png",
+  "publisher": "pugson",
+  "contributes": {
+    "languages": [
+      {
+        "id": "javascript",
+        "extensions": [
+          ".js"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "typescript",
+        "extensions": [
+          ".ts"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "javascriptreact",
+        "extensions": [
+          ".jsx"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "typescriptreact",
+        "extensions": [
+          ".tsx"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "documentFormattingEditors": [
+      {
+        "languageId": "javascript",
+        "extensionId": "svg2jsx",
+        "scheme": "file"
+      },
+      {
+        "languageId": "typescript",
+        "extensionId": "svg2jsx",
+        "scheme": "file"
+      },
+      {
+        "languageId": "javascriptreact",
+        "extensionId": "svg2jsx",
+        "scheme": "file"
+      },
+      {
+        "languageId": "typescriptreact",
+        "extensionId": "svg2jsx",
+        "scheme": "file"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "bun run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "bun run compile && bun run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test",
+    "package": "vsce package --no-dependencies",
+    "install": "code --install-extension *.vsix"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-prettier": "^8.1.0",
+    "@types/babel__core": "^7.20.5",
+    "@types/prettier": "^3.0.0",
+    "@types/svgo": "^3.0.0",
+    "@vscode/vsce": "^2.23.0",
+    "prettier": "^3.2.4"
+  }
 }
